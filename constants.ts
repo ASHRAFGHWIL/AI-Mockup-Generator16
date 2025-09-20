@@ -1,7 +1,7 @@
 import React from 'react';
-import type { DesignStyle, ModelPose, ModelAudience, TshirtFont, ProductType, BagMaterial, TextStyle, FrameStyle, FrameModel, MugStyle, MugModel, SipperGlassStyle, SipperGlassModel, TumblerStyle, TumblerModel, HalloweenTumblerStyle, HalloweenTumblerSetting, TumblerTrioStyle, TumblerTrioSetting, PhoneCaseStyle, PhoneCaseModel, StickerStyle, StickerSetting, PosterStyle, PosterSetting, WalletStyle, WalletModel, CapStyle, CapModel, BeanieStyle, BeanieModel, PillowStyle, PillowSetting, FlatLayStyle, PuzzleStyle, PuzzleSetting, LaptopSleeveStyle, LaptopSleeveSetting, BackgroundStyle, ProfessionalBackground, WritingTemplateCategory } from './types';
+import type { DesignStyle, ModelPose, ModelAudience, TshirtFont, ProductType, BagMaterial, TextStyle, FrameStyle, FrameModel, MugStyle, MugModel, SipperGlassStyle, SipperGlassModel, TumblerStyle, TumblerModel, HalloweenTumblerStyle, HalloweenTumblerSetting, TumblerTrioStyle, TumblerTrioSetting, PhoneCaseStyle, PhoneCaseModel, StickerStyle, StickerSetting, PosterStyle, PosterSetting, WalletStyle, WalletModel, CapStyle, CapModel, BeanieStyle, BeanieModel, PillowStyle, PillowSetting, FlatLayStyle, PuzzleStyle, PuzzleSetting, LaptopSleeveStyle, LaptopSleeveSetting, BackgroundStyle, ProfessionalBackground, WritingTemplateCategory, NotebookStyle, NotebookSetting, PaperCardStyle, PaperCardSetting, PaperClipStyle, PaperClipSetting } from './types';
 // FIX: Added missing icon imports (TumblerIcon, etc.) to resolve module export errors.
-import { TshirtIcon, SweatshirtIcon, HoodieIcon, BagIcon, FrameIcon, MugIcon, SipperGlassIcon, TumblerIcon, HalloweenTumblerIcon, TumblerTrioIcon, LaserIcon, PhoneCaseIcon, StickerIcon, PosterIcon, WalletIcon, CapIcon, BeanieIcon, PillowIcon, FlatLayIcon, PuzzleIcon, LaptopSleeveIcon, TshirtAndMugIcon, SweatshirtAndMugIcon } from './components/productIcons';
+import { TshirtIcon, SweatshirtIcon, HoodieIcon, BagIcon, FrameIcon, MugIcon, SipperGlassIcon, TumblerIcon, HalloweenTumblerIcon, TumblerTrioIcon, LaserIcon, PhoneCaseIcon, StickerIcon, PosterIcon, WalletIcon, CapIcon, BeanieIcon, PillowIcon, FlatLayIcon, PuzzleIcon, LaptopSleeveIcon, TshirtAndMugIcon, SweatshirtAndMugIcon, NotebookIcon, PaperCardIcon, PaperClipIcon } from './components/productIcons';
 
 export const PRODUCT_COLORS = [
   { name: 'White', value: '#FFFFFF' },
@@ -75,6 +75,9 @@ export const PRODUCT_TYPES: {id: ProductType, nameKey: string, icon: React.FC<{ 
     { id: 'poster', nameKey: 'productType_poster', icon: PosterIcon },
     { id: 'jigsaw_puzzle', nameKey: 'productType_jigsaw_puzzle', icon: PuzzleIcon },
     { id: 'laptop_sleeve', nameKey: 'productType_laptop_sleeve', icon: LaptopSleeveIcon },
+    { id: 'notebook', nameKey: 'productType_notebook', icon: NotebookIcon },
+    { id: 'paper_card', nameKey: 'productType_paper_card', icon: PaperCardIcon },
+    { id: 'paper_clip', nameKey: 'productType_paper_clip', icon: PaperClipIcon },
 ];
 
 export const BAG_MATERIALS: {id: BagMaterial, nameKey: string}[] = [
@@ -426,6 +429,43 @@ export const LAPTOP_SLEEVE_SETTINGS: {id: LaptopSleeveSetting, nameKey: string, 
     { id: 'on_desk_modern', nameKey: 'laptopSleeveSetting_on_desk_modern', description: 'a laptop sleeve placed on a modern, organized desk next to a sleek laptop and a cup of coffee' },
     { id: 'person_carrying_street', nameKey: 'laptopSleeveSetting_person_carrying_street', description: 'a stylish person walking down a blurred city street, carrying the laptop sleeve under their arm' },
     { id: 'flat_lay_minimalist', nameKey: 'laptopSleeveSetting_flat_lay_minimalist', description: 'a flat lay of the laptop sleeve on a clean, minimalist background with a few tech accessories like earbuds and a mouse' },
+];
+
+export const NOTEBOOK_STYLES: {id: NotebookStyle, nameKey: string}[] = [
+    { id: 'spiral_bound_kraft', nameKey: 'notebookStyle_spiral_bound_kraft' },
+    { id: 'hardcover_leather', nameKey: 'notebookStyle_hardcover_leather' },
+    { id: 'softcover_moleskine', nameKey: 'notebookStyle_softcover_moleskine' },
+    { id: 'composition_book', nameKey: 'notebookStyle_composition_book' },
+];
+
+export const NOTEBOOK_SETTINGS: {id: NotebookSetting, nameKey: string, description: string}[] = [
+    { id: 'on_wooden_desk_with_pen', nameKey: 'notebookSetting_on_wooden_desk_with_pen', description: 'a notebook on a wooden desk next to a stylish fountain pen and a cup of coffee' },
+    { id: 'flat_lay_with_coffee_and_glasses', nameKey: 'notebookSetting_flat_lay_with_coffee_and_glasses', description: 'a flat lay of the notebook surrounded by reading glasses, a laptop, and a steaming mug' },
+    { id: 'held_open_by_hands', nameKey: 'notebookSetting_held_open_by_hands', description: 'a person with well-manicured hands holding the notebook open, with a blurred background' },
+];
+
+export const PAPER_CARD_STYLES: {id: PaperCardStyle, nameKey: string}[] = [
+    { id: 'flat_matte_cardstock', nameKey: 'paperCardStyle_flat_matte_cardstock' },
+    { id: 'folded_glossy_card', nameKey: 'paperCardStyle_folded_glossy_card' },
+    { id: 'textured_linen_card', nameKey: 'paperCardStyle_textured_linen_card' },
+];
+
+export const PAPER_CARD_SETTINGS: {id: PaperCardSetting, nameKey: string, description: string}[] = [
+    { id: 'on_desk_with_envelope', nameKey: 'paperCardSetting_on_desk_with_envelope', description: 'a paper card on a clean desk next to a matching envelope' },
+    { id: 'leaning_against_flowers', nameKey: 'paperCardSetting_leaning_against_flowers', description: 'a paper card leaning against a beautiful bouquet of fresh flowers' },
+    { id: 'held_by_manicured_hands', nameKey: 'paperCardSetting_held_by_manicured_hands', description: 'a person with beautifully manicured hands holding the paper card' },
+];
+
+export const PAPER_CLIP_STYLES: {id: PaperClipStyle, nameKey: string}[] = [
+    { id: 'classic_silver_metal', nameKey: 'paperClipStyle_classic_silver_metal' },
+    { id: 'colored_vinyl_coated', nameKey: 'paperClipStyle_colored_vinyl_coated' },
+    { id: 'rose_gold_metal', nameKey: 'paperClipStyle_rose_gold_metal' },
+];
+
+export const PAPER_CLIP_SETTINGS: {id: PaperClipSetting, nameKey: string, description: string}[] = [
+    { id: 'clipping_stack_of_papers', nameKey: 'paperClipSetting_clipping_stack_of_papers', description: 'a paper clip holding together a neat stack of white papers' },
+    { id: 'attached_to_backer_card', nameKey: 'paperClipSetting_attached_to_backer_card', description: 'a small, blank paper card with a paper clip attached to the top' },
+    { id: 'single_clip_on_document_closeup', nameKey: 'paperClipSetting_single_clip_on_document_closeup', description: 'an extreme close-up of a paper clip on the corner of a single document' },
 ];
 
 

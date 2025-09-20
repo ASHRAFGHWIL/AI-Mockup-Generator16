@@ -32,7 +32,7 @@ const PreviewDisplay: React.FC<PreviewDisplayProps> = ({ generatedImage, isLoadi
 
     const [loadingMessage, setLoadingMessage] = React.useState(loadingMessages[0]);
     
-    const textBasedProducts: ProductType[] = ['tshirt', 'sweatshirt', 'hoodie', 'bag', 'phone_case', 'sticker', 'poster', 'wallet', 'cap', 'pillow', 'flat_lay', 'tumbler_wrap', 'halloween_tumbler', 'tumbler_trio', 'tshirt_teacup_scene', 'sweatshirt_mug_scene', 'hoodie_teacup_scene', 'sweatshirt_teacup_scene'];
+    const textBasedProducts: ProductType[] = ['tshirt', 'sweatshirt', 'hoodie', 'bag', 'phone_case', 'sticker', 'poster', 'wallet', 'cap', 'pillow', 'flat_lay', 'tumbler_wrap', 'halloween_tumbler', 'tumbler_trio', 'tshirt_teacup_scene', 'sweatshirt_mug_scene', 'hoodie_teacup_scene', 'sweatshirt_teacup_scene', 'notebook', 'paper_card', 'paper_clip'];
     const imageUrl = generatedImage ? `data:image/png;base64,${generatedImage}` : '';
 
     React.useEffect(() => {

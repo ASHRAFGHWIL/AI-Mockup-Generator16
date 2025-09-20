@@ -21,7 +21,7 @@ export type ModelAudience =
 export type TshirtFont = 'impact' | 'bebas_neue' | 'lobster' | 'montserrat' | 'oswald' | 'anton' | 'archivo_black' | 'pacifico' | 'bangers' | 'permanent_marker' | 'roboto' | 'playfair_display' | 'creepster' | 'nosifier' | 'merriweather' | 'lato' | 'poppins' | 'zilla_slab' | 'caveat' | 'dancing_script' | 'rock_salt' | 'special_elite' | 'press_start_2p' | 'monoton';
 
 // New types
-export type ProductType = 'tshirt' | 'sweatshirt' | 'hoodie' | 'bag' | 'frame' | 'mug' | 'sipper_glass' | 'tumbler_wrap' | 'halloween_tumbler' | 'tumbler_trio' | 'laser_engraving' | 'phone_case' | 'sticker' | 'poster' | 'wallet' | 'cap' | 'beanie' | 'pillow' | 'flat_lay' | 'jigsaw_puzzle' | 'laptop_sleeve' | 'tshirt_teacup_scene' | 'sweatshirt_mug_scene' | 'hoodie_teacup_scene' | 'sweatshirt_teacup_scene';
+export type ProductType = 'tshirt' | 'sweatshirt' | 'hoodie' | 'bag' | 'frame' | 'mug' | 'sipper_glass' | 'tumbler_wrap' | 'halloween_tumbler' | 'tumbler_trio' | 'laser_engraving' | 'phone_case' | 'sticker' | 'poster' | 'wallet' | 'cap' | 'beanie' | 'pillow' | 'flat_lay' | 'jigsaw_puzzle' | 'laptop_sleeve' | 'tshirt_teacup_scene' | 'sweatshirt_mug_scene' | 'hoodie_teacup_scene' | 'sweatshirt_teacup_scene' | 'notebook' | 'paper_card' | 'paper_clip';
 export type BagMaterial = 'canvas' | 'leather' | 'nylon' | 'denim' | 'soft_pink_velvet' | 'blush_pink_silk' | 'white_lace_overlay' | 'rose_gold_sequins' | 'creamy_faux_fur';
 export type TextStyle = 'none' | 'outline' | 'shadow' | 'glow' | '3d' | 'metallic' | 'gradient' | 'distressed' | 'fire' | 'comic' | 'glitch' | 'pastel_rainbow' | 'neon' | 'chrome' | 'ice' | 'wooden' | 'script' | 'varsity';
 export type FrameStyle = 'classic_ornate' | 'modern_minimalist' | 'rustic_barnwood' | 'modern_mahogany' | 'rose_gold_ornate' | 'pearl_inlay_minimalist' | 'velvet_lined_shadow_box' | 'lace_carved_wood' | 'shabby_chic_distressed';
@@ -65,6 +65,15 @@ export type PuzzleSetting = 'on_wooden_table' | 'family_playing' | 'flat_lay_min
 // Laptop Sleeve Types
 export type LaptopSleeveStyle = 'neoprene' | 'leather_folio' | 'canvas_pouch';
 export type LaptopSleeveSetting = 'on_desk_modern' | 'person_carrying_street' | 'flat_lay_minimalist';
+// Notebook types
+export type NotebookStyle = 'spiral_bound_kraft' | 'hardcover_leather' | 'softcover_moleskine' | 'composition_book';
+export type NotebookSetting = 'on_wooden_desk_with_pen' | 'flat_lay_with_coffee_and_glasses' | 'held_open_by_hands';
+// Paper Card types
+export type PaperCardStyle = 'flat_matte_cardstock' | 'folded_glossy_card' | 'textured_linen_card';
+export type PaperCardSetting = 'on_desk_with_envelope' | 'leaning_against_flowers' | 'held_by_manicured_hands';
+// Paper Clip types
+export type PaperClipStyle = 'classic_silver_metal' | 'colored_vinyl_coated' | 'rose_gold_metal';
+export type PaperClipSetting = 'clipping_stack_of_papers' | 'attached_to_backer_card' | 'single_clip_on_document_closeup';
 
 
 export type ImageMode = 'fit' | 'fit_blur' | 'fit_transparent' | 'crop' | 'stretch';
@@ -180,6 +189,18 @@ export interface DesignOptions {
   // Laptop Sleeve specific
   laptopSleeveStyle: LaptopSleeveStyle;
   laptopSleeveSetting: LaptopSleeveSetting;
+
+  // Notebook specific
+  notebookStyle: NotebookStyle;
+  notebookSetting: NotebookSetting;
+
+  // Paper Card specific
+  paperCardStyle: PaperCardStyle;
+  paperCardSetting: PaperCardSetting;
+
+  // Paper Clip specific
+  paperClipStyle: PaperClipStyle;
+  paperClipSetting: PaperClipSetting;
 }
 
 export type SetDesignOptions = React.Dispatch<React.SetStateAction<DesignOptions>>;

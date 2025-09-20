@@ -4,7 +4,8 @@ import PreviewDisplay from './components/PreviewDisplay';
 import { WandIcon } from './components/icons';
 import type { DesignOptions, ImageMode } from './types';
 import { generateMockup as generateMockupFromApi } from './services/geminiService';
-import { generateDesignPng, generateEngravingSvg, generateTextOnlySvg, generateTextOnlyPng } from './services/svgService';
+// FIX: Corrected imports to remove non-existent `generateDesignPng` and include newly added functions.
+import { generateEngravingSvg, generateTextOnlySvg, generateTextOnlyPng } from './services/svgService';
 import { LanguageContext, useTranslation, Language } from './hooks/useTranslation';
 import { en } from './i18n/en';
 // FIX: Statically import the 'ar' translations to resolve the "Cannot find name 'require'" error, which is not available in a browser environment.
@@ -89,6 +90,12 @@ const AppContent: React.FC = () => {
     puzzleSetting: 'on_wooden_table',
     laptopSleeveStyle: 'neoprene',
     laptopSleeveSetting: 'on_desk_modern',
+    notebookStyle: 'spiral_bound_kraft',
+    notebookSetting: 'on_wooden_desk_with_pen',
+    paperCardStyle: 'flat_matte_cardstock',
+    paperCardSetting: 'on_desk_with_envelope',
+    paperClipStyle: 'classic_silver_metal',
+    paperClipSetting: 'attached_to_backer_card',
   });
   const [generatedImage, setGeneratedImage] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);

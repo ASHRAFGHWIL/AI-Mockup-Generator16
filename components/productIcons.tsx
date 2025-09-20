@@ -171,3 +171,24 @@ export const SweatshirtAndMugIcon = ({ className }: { className?: string }) => (
     <path d="M17 14h2a1 1 0 011 1v2a1 1 0 01-1 1h-2v-4z" />
   </svg>
 );
+
+export const NotebookIcon = ({ className }: { className?: string }) => (
+  <svg {...IconProps} className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.5m-1.5 6h1.5m-1.5 6h1.5m-1.5 6h1.5m9-18h-3a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h3a2.25 2.25 0 002.25-2.25v-13.5A2.25 2.25 0 0010.5 3z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 3v18H15V3h6.75z" />
+  </svg>
+);
+
+export const PaperCardIcon = ({ className }: { className?: string }) => (
+  <svg {...IconProps} className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 3h-15A2.25 2.25 0 002.25 5.25v13.5A2.25 2.25 0 004.5 21h15a2.25 2.25 0 002.25-2.25V5.25A2.25 2.25 0 0019.5 3z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 12h.008v.008H16.5V12zm-3 0h.008v.008H13.5V12zm-3 0h.008v.008H10.5V12zm-3 0h.008v.008H7.5V12z" />
+  </svg>
+);
+
+export const PaperClipIcon = ({ className }: { className?: string }) => (
+  <svg {...IconProps} className={className}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-6.364-6.364L16.75 4.5" />
+  </svg>
+);
